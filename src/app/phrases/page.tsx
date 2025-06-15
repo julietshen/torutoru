@@ -1,22 +1,13 @@
-import Link from "next/link";
-
-const categories = ["Family", "Dining", "Greetings"];
+import PhraseCard from "@/components/ui/PhraseCard";
+import { allPhrases } from "@/data/content";
 
 export default function PhrasesPage() {
   return (
     <div>
-      <h1 className="text-3xl font-bold mb-4 text-center sm:text-left">
-        Phrases
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {categories.map((category) => (
-          <Link
-            key={category}
-            href={`/phrases/${category.toLowerCase()}`}
-            className="btn btn-primary btn-lg h-32 text-2xl"
-          >
-            {category}
-          </Link>
+      <h1 className="text-3xl font-bold mb-4">Phrases</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {allPhrases.map((phrase) => (
+          <PhraseCard key={phrase.id} phrase={phrase} />
         ))}
       </div>
     </div>
