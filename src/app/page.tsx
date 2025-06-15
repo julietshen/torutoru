@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import kemCho from "@/public/kem-cho-illustration.png";
 
 export default function Home() {
   return (
@@ -9,8 +11,13 @@ export default function Home() {
 
         <div className="card bg-accent text-neutral shadow-xl my-8 w-full max-w-sm">
           <figure className="px-10 pt-10">
-            {/* Placeholder for illustration */}
-            <div className="bg-neutral/20 h-32 w-full rounded-lg"></div>
+            <Image
+              src={kemCho}
+              alt="Illustration of a person waving"
+              width={300}
+              height={300}
+              priority
+            />
           </figure>
           <div className="card-body items-center text-center">
             <h3 className="card-title text-3xl">કેમ છો?</h3>
