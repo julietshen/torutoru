@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="torutoru">
+    <html lang="en">
       <body className={`${nunito.className} bg-primary`}>
         <AuthProvider>
           <div className="flex flex-col items-center min-h-screen p-4 sm:p-8">
