@@ -38,7 +38,8 @@ export default function WordCard({ word }: WordCardProps) {
         <div className="flex justify-between items-start">
           <div>
             <h2 className="card-title text-3xl font-bold">{word.gujarati}</h2>
-            <p className="text-lg">{word.romanized}</p>
+            <p className="text-lg -mt-2">{word.romanized}</p>
+            <p className="mt-2">{word.english}</p>
           </div>
           <button className="btn btn-ghost btn-sm btn-circle">
             <StarIcon />

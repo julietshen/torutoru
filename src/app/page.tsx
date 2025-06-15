@@ -24,6 +24,7 @@ export default function Home() {
               priority
             />
             <h3 className="card-title text-3xl mt-4">કેમ છો?</h3>
+            <p className="text-lg -mt-2">Kem cho?</p>
             <p>How are you?</p>
           </div>
         </div>
