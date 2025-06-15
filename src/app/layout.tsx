@@ -3,6 +3,7 @@ import { Nunito } from "next/font/google";
 import "./globals.css";
 import AuthProvider from "@/components/layout/AuthProvider";
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -23,8 +24,11 @@ export default function RootLayout({
     <html lang="en" data-theme="torutoru">
       <body className={`${nunito.className} bg-secondary text-secondary-content`}>
         <AuthProvider>
-          <Navbar />
-          <main className="max-w-4xl mx-auto p-4 sm:p-6">{children}</main>
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow max-w-4xl mx-auto p-4 sm:p-6 w-full">{children}</main>
+            <Footer />
+          </div>
         </AuthProvider>
       </body>
     </html>
