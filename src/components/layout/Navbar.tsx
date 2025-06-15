@@ -64,28 +64,28 @@ export default function Navbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-primary rounded-box w-52"
+              className="menu dropdown-content mt-3 z-[1] p-2 shadow bg-primary rounded-box w-52"
             >
               <li>
-                <Link href="/dashboard">Dashboard</Link>
+                <Link href="/dashboard" className="text-lg">Dashboard</Link>
               </li>
               <li>
-                <Link href="/vocabulary">Vocabulary</Link>
+                <Link href="/vocabulary" className="text-lg">Vocabulary</Link>
               </li>
               <li>
-                <Link href="/phrases">Phrases</Link>
+                <Link href="/phrases" className="text-lg">Phrases</Link>
               </li>
               <li>
-                <Link href="/quiz">Quiz</Link>
+                <Link href="/quiz" className="text-lg">Quiz</Link>
               </li>
               <div className="divider my-1"></div>
               {session ? (
                 <li>
-                  <button onClick={() => signOut()}>Log out</button>
+                  <button onClick={() => signOut()} className="text-lg">Log out</button>
                 </li>
               ) : (
                 <li>
-                  <button onClick={() => signIn()}>Log in</button>
+                  <button onClick={() => signIn()} className="text-lg">Log in</button>
                 </li>
               )}
             </ul>

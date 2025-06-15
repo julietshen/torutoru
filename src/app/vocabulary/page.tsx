@@ -46,7 +46,7 @@ export default function VocabularyPage() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-4">
+      <div className="flex flex-wrap justify-between items-center mb-4 gap-4">
         <h1 className="text-3xl font-bold">Vocabulary</h1>
         <div className="form-control">
           <label className="label cursor-pointer gap-3">

@@ -36,10 +36,10 @@ export default function Flashcard({ phrase }: { phrase: Phrase }) {
     <div className="flashcard-container" onClick={handleFlip}>
       <div className={`flashcard ${isFlipped ? "is-flipped" : ""}`}>
         {/* Front of the card */}
-        <div className="card flashcard-front bg-accent text-accent-content shadow-md">
-          <div className="card-body justify-center items-center text-center p-4">
-            <h2 className="card-title text-3xl font-bold">{phrase.gujarati_script}</h2>
-            <p className="text-xl -mt-2">{phrase.romanized}</p>
+        <div className="card flashcard-front bg-accent text-accent-content shadow-md grid place-content-center text-center p-4">
+          <div>
+            <h2 className="card-title text-5xl font-bold">{phrase.gujarati_script}</h2>
+            <p className="text-2xl">{phrase.romanized}</p>
           </div>
           <div className="absolute bottom-4 left-4 badge badge-outline border-accent-content/50 text-accent-content/70 capitalize">
             {phrase.category}
@@ -53,12 +53,10 @@ export default function Flashcard({ phrase }: { phrase: Phrase }) {
         </div>
 
         {/* Back of the card */}
-        <div className="card flashcard-back bg-accent text-accent-content shadow-md">
-          <div className="card-body p-4 justify-center items-center">
-            <p className="text-2xl font-semibold italic">
-              {`"${phrase.english}"`}
-            </p>
-          </div>
+        <div className="card flashcard-back bg-accent text-accent-content shadow-md grid place-content-center p-4">
+          <p className="text-2xl font-semibold italic text-center">
+            {`"${phrase.english}"`}
+          </p>
         </div>
       </div>
     </div>
