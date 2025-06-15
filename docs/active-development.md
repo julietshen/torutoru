@@ -1,0 +1,5 @@
+- Scaffolding the initial Next.js project.
+- Setting up the basic directory structure.
+- Implementing the core UI based on the design mockups, including the main layout, home page, vocabulary page, and phrases page.
+- Creating foundational components like `Header`, `WordCard`, and `AuthProvider`.
+- Configuring NextAuth.js with a Google provider.
