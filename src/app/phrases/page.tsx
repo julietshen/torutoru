@@ -13,15 +13,15 @@ export default function PhrasesPage() {
       <div className="flex justify-between items-center mb-4">
         <h1 className="text-3xl font-bold">Phrases</h1>
         <div className="form-control">
-          <label className="label cursor-pointer gap-2">
-            <span className="label-text">Flashcard Mode</span>
+          <label className="label cursor-pointer gap-3">
+            <span className={`label-text text-accent-content transition-all ${!isListMode ? 'font-bold' : 'opacity-60'}`}>Flashcard Mode</span>
             <input
               type="checkbox"
-              className="toggle"
+              className="toggle toggle-accent"
               checked={!isListMode}
               onChange={() => setIsListMode(!isListMode)}
             />
-            <span className="label-text">List View</span>
+            <span className={`label-text text-accent-content transition-all ${isListMode ? 'font-bold' : 'opacity-60'}`}>List View</span>
           </label>
         </div>
       </div>
