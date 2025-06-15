@@ -29,19 +29,19 @@ export default function Flashcard({ phrase }: { phrase: Phrase }) {
   const handleSound = (e: React.MouseEvent) => {
     e.stopPropagation(); // Prevent card from flipping when clicking the icon
     // TODO: Add text-to-speech functionality
-    console.log("TTS for:", phrase.gujarati);
+    console.log("TTS for:", phrase.gujarati_script);
   };
 
   return (
     <div className="flashcard-container" onClick={handleFlip}>
       <div className={`flashcard ${isFlipped ? "is-flipped" : ""}`}>
         {/* Front of the card */}
-        <div className="card flashcard-front bg-primary text-primary-content shadow-md">
+        <div className="card flashcard-front bg-accent text-accent-content shadow-md">
           <div className="card-body justify-center items-center text-center p-4">
-            <h2 className="card-title text-3xl font-bold">{phrase.gujarati}</h2>
+            <h2 className="card-title text-3xl font-bold">{phrase.gujarati_script}</h2>
             <p className="text-xl -mt-2">{phrase.romanized}</p>
           </div>
-          <div className="absolute bottom-4 left-4 badge badge-outline border-primary-content/50 text-primary-content/70 capitalize">
+          <div className="absolute bottom-4 left-4 badge badge-outline border-accent-content/50 text-accent-content/70 capitalize">
             {phrase.category}
           </div>
           <button
@@ -53,7 +53,7 @@ export default function Flashcard({ phrase }: { phrase: Phrase }) {
         </div>
 
         {/* Back of the card */}
-        <div className="card flashcard-back bg-primary text-primary-content shadow-md">
+        <div className="card flashcard-back bg-accent text-accent-content shadow-md">
           <div className="card-body p-4 justify-center items-center">
             <p className="text-2xl font-semibold italic">
               {`"${phrase.english}"`}

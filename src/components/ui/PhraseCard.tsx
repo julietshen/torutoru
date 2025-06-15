@@ -17,14 +17,14 @@ const SpeakerIcon = () => (
 
 export default function PhraseCard({ phrase }: { phrase: Phrase }) {
   return (
-    <div className="card bg-primary text-primary-content shadow-md">
+    <div className="card bg-accent text-accent-content shadow-md">
       <div className="card-body p-4">
-        <h2 className="card-title text-2xl font-bold">{phrase.gujarati}</h2>
+        <h2 className="card-title text-2xl font-bold">{phrase.gujarati_script}</h2>
         <p className="text-md -mt-2">{phrase.romanized}</p>
         <p className="mt-2 text-lg font-light italic">{`"${phrase.english}"`}</p>
 
         <div className="card-actions justify-between items-center mt-4">
-          <div className="badge badge-outline border-primary-content/50 text-primary-content/70 capitalize">
+          <div className="badge badge-outline border-accent-content/50 text-accent-content/70 capitalize">
             {phrase.category}
           </div>
           <button className="btn btn-ghost btn-sm btn-circle">

@@ -1,19 +1,21 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useSession, signIn, signOut } from "next-auth/react";
 
 export default function Navbar() {
   const { data: session } = useSession();
 
   return (
-    <div className="bg-base-100 text-base-content">
+    <div className="bg-primary text-primary-content">
       <div className="navbar max-w-4xl mx-auto">
         <div className="navbar-start">
           <Link
             href="/"
-            className="btn btn-ghost normal-case text-2xl font-bold"
+            className="normal-case text-2xl font-bold flex items-center gap-2"
           >
+            <Image src="/logo.png" alt="Torutoru Logo" width={32} height={32} />
             Torutoru
           </Link>
         </div>
@@ -62,7 +64,7 @@ export default function Navbar() {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-primary rounded-box w-52"
             >
               <li>
                 <Link href="/dashboard">Dashboard</Link>

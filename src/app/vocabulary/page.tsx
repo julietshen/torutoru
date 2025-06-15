@@ -50,14 +50,14 @@ export default function VocabularyPage() {
         <h1 className="text-3xl font-bold">Vocabulary</h1>
         <div className="form-control">
           <label className="label cursor-pointer gap-3">
-            <span className={`label-text text-accent-content transition-all ${!isListMode ? 'font-bold' : 'opacity-60'}`}>Flashcard Mode</span>
+            <span className={`label-text transition-all ${!isListMode ? 'font-bold' : 'opacity-60'}`}>Flashcard Mode</span>
             <input
               type="checkbox"
               className="toggle toggle-accent"
               checked={!isListMode}
               onChange={() => setIsListMode(!isListMode)}
             />
-            <span className={`label-text text-accent-content transition-all ${isListMode ? 'font-bold' : 'opacity-60'}`}>List View</span>
+            <span className={`label-text transition-all ${isListMode ? 'font-bold' : 'opacity-60'}`}>List View</span>
           </label>
         </div>
       </div>

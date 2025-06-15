@@ -9,6 +9,9 @@ const nunito = Nunito({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Torutoru - Learn Gujarati",
   description: "Learn Gujarati for family, for love, for connection.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

@@ -10,7 +10,7 @@ export default function Home() {
           <p className="py-6 text-2xl">
             Start your journey to connect with family and culture.
           </p>
-          <Link href="/vocabulary" className="btn btn-neutral">
+          <Link href="/vocabulary" className="btn btn-accent btn-lg">
             Get Started
           </Link>
         </div>
