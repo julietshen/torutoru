@@ -23,7 +23,7 @@ export default function Navbar() {
               <Link href="/dashboard">Dashboard</Link>
             </li>
             <li>
-              <Link href="/learn">Vocabulary</Link>
+              <Link href="/vocabulary">Vocabulary</Link>
             </li>
             <li>
               <Link href="/phrases">Phrases</Link>
@@ -68,7 +68,7 @@ export default function Navbar() {
                 <Link href="/dashboard">Dashboard</Link>
               </li>
               <li>
-                <Link href="/learn">Vocabulary</Link>
+                <Link href="/vocabulary">Vocabulary</Link>
               </li>
               <li>
                 <Link href="/phrases">Phrases</Link>

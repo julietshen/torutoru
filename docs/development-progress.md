@@ -17,3 +17,11 @@
 - Connect the application to a backend (Supabase/Prisma) for progress tracking.
 - Add audio functionality for words and phrases.
 - Replace placeholder icons and illustrations with final assets.
+
+## Phase 2: Vocabulary Module
+
+- **[X] Create Vocabulary Page:** Built the `/vocabulary` page to display vocabulary.
+- **[X] Implement CSV Data Loading:** The page now dynamically fetches and parses vocabulary from `/public/torutoru_vocabulary_200_surti.csv`.
+- **[X] Create Word Components:** Added `WordCard` and `WordFlashcard` components for displaying vocabulary items.
+- **[X] Add View Toggle:** Implemented a "Flashcard Mode" vs. "List View" toggle, mirroring the phrases page functionality.
+- **[X] Update Navigation:** The main navbar now correctly links to the new vocabulary page.

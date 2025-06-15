@@ -33,21 +33,16 @@ const SpeakerIcon = () => (
 
 export default function WordCard({ word }: WordCardProps) {
   return (
-    <div className="card bg-primary text-primary-content shadow-md mb-4">
+    <div className="card bg-primary text-primary-content shadow-md">
       <div className="card-body p-4">
-        <div className="flex justify-between items-start">
-          <div>
-            <h2 className="card-title text-3xl font-bold">{word.gujarati}</h2>
-            <p className="text-lg -mt-2">{word.romanized}</p>
-            <p className="mt-2">{word.english}</p>
-          </div>
-          <button className="btn btn-ghost btn-sm btn-circle">
-            <StarIcon />
-          </button>
-        </div>
+        <h2 className="card-title text-2xl font-bold">{word.gujarati_script}</h2>
+        <p className="text-md -mt-2">{word.romanized}</p>
+        <p className="mt-2 text-lg font-light italic">{`"${word.english}"`}</p>
 
-        <div className="flex justify-between items-end mt-4">
-          <div className="badge badge-outline">{word.category}</div>
+        <div className="card-actions justify-between items-center mt-4">
+          <div className="badge badge-outline border-primary-content/50 text-primary-content/70 capitalize">
+            {word.category}
+          </div>
           <button className="btn btn-ghost btn-sm btn-circle">
             <SpeakerIcon />
           </button>
