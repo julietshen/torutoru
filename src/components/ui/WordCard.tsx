@@ -33,7 +33,7 @@ const SpeakerIcon = () => (
 
 export default function WordCard({ word }: WordCardProps) {
   return (
-    <div className="card bg-accent text-neutral shadow-md mb-4">
+    <div className="card bg-primary text-primary-content shadow-md mb-4">
       <div className="card-body p-4">
         <div className="flex justify-between items-start">
           <div>

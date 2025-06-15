@@ -2,10 +2,10 @@
 @plugin "daisyui";
 
 [data-theme="torutoru"] {
-  --color-primary: #d85e27; /* Orange */
-  --color-primary-content: #f1e8d9; /* Cream text on Orange */
+  --color-primary: #d85e27; /* Orange - for primary elements like cards */
+  --color-primary-content: #231e19; /* Charcoal text on Orange */
 
-  --color-secondary: #042015; /* Dark Green */
+  --color-secondary: #042015; /* Dark Green - for page background */
   --color-secondary-content: #f1e8d9; /* Cream text on Dark Green */
 
   --color-accent: #063221; /* Forest Green */
@@ -14,7 +14,7 @@
   --color-neutral: #231e19; /* Charcoal */
   --color-neutral-content: #f1e8d9; /* Cream text on Charcoal */
 
-  --color-base-100: #f1e8d9; /* Base page color: Cream */
+  --color-base-100: #f1e8d9; /* Base surface color: Cream (Navbar, some cards) */
   --color-base-200: #e8dbc9; /* Slightly darker cream */
   --color-base-300: #dfceb9; /* Even darker cream */
   --color-base-content: #231e19; /* Charcoal text on Cream */
