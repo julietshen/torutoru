@@ -2,12 +2,12 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col h-full p-4 text-center">
-      <div className="flex-grow flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold">Kem Cho!</h1>
-        <h2 className="text-2xl mt-2">Ready to Learn Gujarati?</h2>
+    <div className="flex flex-col h-full text-center">
+      <div className="flex-grow flex flex-col items-center justify-center p-4">
+        <h1 className="text-4xl md:text-5xl font-bold">Kem Cho!</h1>
+        <h2 className="text-2xl md:text-3xl mt-2">Ready to Learn Gujarati?</h2>
 
-        <div className="card bg-accent text-neutral shadow-xl my-8 w-full">
+        <div className="card bg-accent text-neutral shadow-xl my-8 w-full max-w-sm">
           <figure className="px-10 pt-10">
             {/* Placeholder for illustration */}
             <div className="bg-neutral/20 h-32 w-full rounded-lg"></div>
@@ -19,17 +19,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <Link href="/learn" className="btn btn-neutral">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-secondary-focus/50 rounded-t-lg">
+        <Link href="/learn" className="btn btn-neutral text-base md:text-lg">
           Vocabulary
         </Link>
-        <Link href="/phrases" className="btn btn-neutral">
+        <Link href="/phrases" className="btn btn-neutral text-base md:text-lg">
           Phrases
         </Link>
-        <Link href="/quiz" className="btn btn-neutral">
+        <Link href="/quiz" className="btn btn-neutral text-base md:text-lg">
           Quiz
         </Link>
-        <Link href="/account" className="btn btn-neutral">
+        <Link href="/account" className="btn btn-neutral text-base md:text-lg">
           Progress
         </Link>
       </div>

@@ -7,8 +7,10 @@ export default function VocabularyPage() {
     <div>
       <Header />
       <main className="container mx-auto p-4">
-        <h1 className="text-4xl font-bold my-4">Vocabulary</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <h1 className="text-3xl font-bold mb-4 text-center sm:text-left">
+          Vocabulary
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {vocabulary.map((word) => (
             <WordCard key={word.id} word={word} />
           ))}
