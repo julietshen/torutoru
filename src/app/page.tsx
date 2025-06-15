@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import kemCho from "@/public/kem-cho-illustration.png";
 
 export default function Home() {
   return (
@@ -12,7 +11,7 @@ export default function Home() {
         <div className="card bg-accent text-neutral shadow-xl my-8 w-full max-w-sm">
           <figure className="px-10 pt-10">
             <Image
-              src={kemCho}
+              src="/kem-cho-illustration.png"
               alt="Illustration of a person waving"
               width={300}
               height={300}
