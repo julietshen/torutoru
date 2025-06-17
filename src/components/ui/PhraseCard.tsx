@@ -25,9 +25,9 @@ export default function PhraseCard({ phrase }: { phrase: Phrase }) {
       <div className="card-body p-4 flex flex-col">
         <div className="flex-grow">
           <h2 className={`card-title font-bold break-all ${gujaratiSizeClass}`}>{phrase.gujarati_script}</h2>
-          <div className="flex justify-between items-start gap-2 mt-1">
-            <p className={`${romanizedSizeClass} break-all min-w-0`}>{phrase.romanized}</p>
-            <button className="btn btn-ghost btn-sm btn-circle shrink-0">
+          <div className="relative mt-1">
+            <p className={`${romanizedSizeClass} break-all pr-10`}>{phrase.romanized}</p>
+            <button className="absolute top-0 right-0 btn btn-ghost btn-sm btn-circle">
               <SpeakerIcon />
             </button>
           </div>
