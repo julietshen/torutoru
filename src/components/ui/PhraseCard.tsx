@@ -25,14 +25,14 @@ export default function PhraseCard({ phrase }: { phrase: Phrase }) {
       <div className="card-body p-4 flex flex-col">
         <div className="flex-grow">
           <h2 className={`card-title font-bold break-all ${gujaratiSizeClass}`}>{phrase.gujarati_script}</h2>
-          <div className="flex justify-between items-start gap-2">
-            <p className={`${romanizedSizeClass} -mt-2 break-all min-w-0`}>{phrase.romanized}</p>
+          <div className="flex justify-between items-start gap-2 mt-1">
+            <p className={`${romanizedSizeClass} break-all min-w-0`}>{phrase.romanized}</p>
             <button className="btn btn-ghost btn-sm btn-circle shrink-0">
               <SpeakerIcon />
             </button>
           </div>
-          <p className="mt-2 text-lg font-light italic">{`"${phrase.english}"`}</p>
         </div>
+        <p className="mt-2 text-lg font-light italic">{`"${phrase.english}"`}</p>
       </div>
     </div>
   );
