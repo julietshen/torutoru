@@ -36,15 +36,17 @@ export default function Flashcard({ phrase }: { phrase: Phrase }) {
     <div className="flashcard-container" onClick={handleFlip}>
       <div className={`flashcard ${isFlipped ? "is-flipped" : ""}`}>
         {/* Front of the card */}
-        <div className="card flashcard-front bg-accent text-accent-content shadow-md text-center p-4 flex flex-col justify-between">
-          {/* Main content area */}
-          <div className="flex-grow flex flex-col items-center justify-center">
-            <h2 className="card-title text-5xl font-bold">{phrase.gujarati_script}</h2>
-            <p className="text-2xl mt-2">{phrase.romanized}</p>
+        <div className="card flashcard-front bg-accent text-accent-content shadow-md p-4 flex flex-col">
+          {/* Main content area, takes up all available space and centers its content */}
+          <div className="flex-grow grid place-content-center text-center">
+            <div>
+              <h2 className="card-title text-5xl font-bold leading-tight">{phrase.gujarati_script}</h2>
+              <p className="text-2xl mt-2">{phrase.romanized}</p>
+            </div>
           </div>
 
           {/* Bottom actions */}
-          <div className="flex justify-between items-center w-full mt-4">
+          <div className="flex justify-between items-center w-full pt-2">
             <div className="badge badge-outline border-accent-content/50 text-accent-content/70 capitalize">
               {phrase.category}
             </div>
