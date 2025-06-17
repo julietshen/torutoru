@@ -36,20 +36,25 @@ export default function Flashcard({ phrase }: { phrase: Phrase }) {
     <div className="flashcard-container" onClick={handleFlip}>
       <div className={`flashcard ${isFlipped ? "is-flipped" : ""}`}>
         {/* Front of the card */}
-        <div className="card flashcard-front bg-accent text-accent-content shadow-md grid place-content-center text-center p-4">
-          <div>
+        <div className="card flashcard-front bg-accent text-accent-content shadow-md text-center p-4 flex flex-col justify-between">
+          {/* Main content area */}
+          <div className="flex-grow flex flex-col items-center justify-center">
             <h2 className="card-title text-5xl font-bold">{phrase.gujarati_script}</h2>
-            <p className="text-2xl">{phrase.romanized}</p>
+            <p className="text-2xl mt-2">{phrase.romanized}</p>
           </div>
-          <div className="absolute bottom-4 left-4 badge badge-outline border-accent-content/50 text-accent-content/70 capitalize">
-            {phrase.category}
+
+          {/* Bottom actions */}
+          <div className="flex justify-between items-center w-full mt-4">
+            <div className="badge badge-outline border-accent-content/50 text-accent-content/70 capitalize">
+              {phrase.category}
+            </div>
+            <button
+              className="btn btn-ghost btn-sm btn-circle"
+              onClick={handleSound}
+            >
+              <SpeakerIcon />
+            </button>
           </div>
-          <button
-            className="btn btn-ghost btn-sm btn-circle absolute bottom-4 right-4"
-            onClick={handleSound}
-          >
-            <SpeakerIcon />
-          </button>
         </div>
 
         {/* Back of the card */}
